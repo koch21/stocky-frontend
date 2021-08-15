@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "stocky-frontend",
+    "slug": "stocky-frontend",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "stocky-frontend"
+}
