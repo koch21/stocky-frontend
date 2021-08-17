@@ -8,7 +8,7 @@ import Routes from './routes/routes'
 
 // Themes
 import { ThemeProvider } from 'styled-components/native'
-import themes from './styles/themes/index'
+import themes from './styles/index'
 import {
   useFonts,
   Inter_400Regular,
@@ -19,7 +19,7 @@ import {
 const App = () => {
   // Dark Mode
   const colorScheme = useColorScheme()
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(false)
   useEffect(() => {
     setIsDark(colorScheme === 'dark')
   }, [colorScheme])
@@ -34,7 +34,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <ThemeProvider theme={isDark ? themes.dark : themes.light}>
-        <StatusBar style="inverted" />
+        <StatusBar style={isDark ? "light" : "dark"} />
         <Routes />
       </ThemeProvider>
     </NavigationContainer>
