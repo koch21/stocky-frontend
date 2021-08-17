@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import Routes from './routes/routes'
 
 // Themes
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components/native'
 import themes from './styles/themes/index'
 import {
   useFonts,
