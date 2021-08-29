@@ -5,10 +5,13 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
+    'standard',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
     'prettier/standard',
     'prettier/react'
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -16,6 +19,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', 'prettier'],
-  rules: {}
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'space-before-function-paren': 'off',
+    'react/prop-types': 'off'
+  }
 }

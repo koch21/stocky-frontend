@@ -9,12 +9,7 @@ import Routes from './routes/routes'
 // Themes
 import { ThemeProvider } from 'styled-components/native'
 import themes from './styles/index'
-import {
-  useFonts,
-  Inter_400Regular,
-  Inter_500Medium,
-  Inter_700Bold
-} from '@expo-google-fonts/inter'
+import { useFonts, Inter_400Regular, Inter_500Medium, Inter_700Bold } from '@expo-google-fonts/inter'
 
 const App = () => {
   // Dark Mode
@@ -34,7 +29,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <ThemeProvider theme={isDark ? themes.dark : themes.light}>
-        <StatusBar style={isDark ? "light" : "dark"} />
+        <StatusBar style={isDark ? 'light' : 'dark'} />
         <Routes />
       </ThemeProvider>
     </NavigationContainer>
