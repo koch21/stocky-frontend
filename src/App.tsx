@@ -7,19 +7,14 @@ import { NavigationContainer } from '@react-navigation/native'
 import Routes from './routes/routes'
 
 // Themes
-import { ThemeProvider } from 'styled-components'
-import themes from './styles/themes/index'
-import {
-  useFonts,
-  Inter_400Regular,
-  Inter_500Medium,
-  Inter_700Bold
-} from '@expo-google-fonts/inter'
+import { ThemeProvider } from 'styled-components/native'
+import themes from './styles/index'
+import { useFonts, Inter_400Regular, Inter_500Medium, Inter_700Bold } from '@expo-google-fonts/inter'
 
 const App = () => {
   // Dark Mode
   const colorScheme = useColorScheme()
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(false)
   useEffect(() => {
     setIsDark(colorScheme === 'dark')
   }, [colorScheme])
@@ -34,7 +29,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <ThemeProvider theme={isDark ? themes.dark : themes.light}>
-        <StatusBar style="inverted" />
+        <StatusBar style={isDark ? 'light' : 'dark'} />
         <Routes />
       </ThemeProvider>
     </NavigationContainer>
