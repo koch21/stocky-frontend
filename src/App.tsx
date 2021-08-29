@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { useColorScheme } from 'react-native'
+import { ActivityIndicator, useColorScheme } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 
 // Routes
@@ -26,14 +26,19 @@ const App = () => {
     Inter_700Bold
   })
 
-  return (
-    <NavigationContainer>
-      <ThemeProvider theme={isDark ? themes.dark : themes.light}>
-        <StatusBar style={isDark ? 'light' : 'dark'} />
-        <Routes />
-      </ThemeProvider>
-    </NavigationContainer>
-  )
+  // if fonts are not loaded, show loading screen
+  if (!fontsLoaded) {
+    return <ActivityIndicator size="large" color="#0084eb" />
+  } else {
+    return (
+      <NavigationContainer>
+        <ThemeProvider theme={isDark ? themes.dark : themes.light}>
+          <StatusBar style={isDark ? 'light' : 'dark'} />
+          <Routes />
+        </ThemeProvider>
+      </NavigationContainer>
+    )
+  }
 }
 
 export default App
