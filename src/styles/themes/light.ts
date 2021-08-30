@@ -3,10 +3,10 @@ export const light = {
     primary: '#f2f2f2',
     secondary: '#121212',
 
-    grey: '#cdcecd',
-    lightGrey: '#e4e4e4',
-    darkGrey: '#b5b5b5',
-    darkestGrey: '#898989',
+    gray: '#cdcecd',
+    lightGray: '#e4e4e4',
+    darkGray: '#b5b5b5',
+    darkestGray: '#898989',
     blue: '#0392ea',
     red: '#ff4444'
   },

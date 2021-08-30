@@ -20,7 +20,7 @@ const TabNavigator = () => {
           fontSize: 0
         },
         tabBarStyle: {
-          backgroundColor: useColorScheme() === 'dark' ? themes.dark.colors.grey : themes.light.colors.grey,
+          backgroundColor: useColorScheme() === 'dark' ? themes.dark.colors.gray : themes.light.colors.gray,
           borderTopColor: 'transparent'
         },
         tabBarIcon: ({ focused }) => {
@@ -39,10 +39,10 @@ const TabNavigator = () => {
                 useColorScheme() === 'dark'
                   ? focused
                     ? themes.dark.colors.secondary
-                    : themes.dark.colors.lightGrey
+                    : themes.dark.colors.lightGray
                   : focused
                   ? themes.light.colors.secondary
-                  : themes.light.colors.lightGrey
+                  : themes.light.colors.lightGray
               }
             />
           )
