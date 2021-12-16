@@ -9,7 +9,16 @@ import Routes from './routes/routes'
 // Themes
 import { ThemeProvider } from 'styled-components/native'
 import themes from './styles/index'
-import { useFonts, Inter_400Regular, Inter_500Medium, Inter_700Bold } from '@expo-google-fonts/inter'
+import {
+  useFonts,
+  Inter_100Thin,
+  Inter_200ExtraLight,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_500Medium,
+  Inter_600SemiBold,
+  Inter_700Bold
+} from '@expo-google-fonts/inter'
 
 const App = () => {
   // Dark Mode
@@ -21,8 +30,12 @@ const App = () => {
 
   // setting expo fonts
   const [fontsLoaded] = useFonts({
+    Inter_100Thin,
+    Inter_200ExtraLight,
+    Inter_300Light,
     Inter_400Regular,
     Inter_500Medium,
+    Inter_600SemiBold,
     Inter_700Bold
   })
 
