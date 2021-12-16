@@ -2,7 +2,7 @@ import * as React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 // Screens
-import Home from '../screens/home'
+import Home from '../screens/Home'
 
 // Themes
 import themes from '../styles/index'
