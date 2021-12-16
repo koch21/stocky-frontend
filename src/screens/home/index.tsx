@@ -1,10 +1,12 @@
 import React from 'react'
-import { Container, Title } from './styles'
+import { Container } from './styles'
 
-const Home = () => {
+import Header from '../../components/Header'
+
+const Home: React.FC = ({ children }) => {
   return (
     <Container>
-      <Title>Home</Title>
+      <Header PageName="Home" />
     </Container>
   )
 }

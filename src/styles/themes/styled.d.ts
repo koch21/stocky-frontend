@@ -6,10 +6,10 @@ declare module 'styled-components' {
       primary: string
       secundary: string
 
-      grey: string
-      lightGrey: string
-      darkGrey: string
-      darkestGrey: string
+      gray: string
+      lightGray: string
+      darkGray: string
+      darkestGray: string
       blue: string
       red: string
     }

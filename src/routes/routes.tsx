@@ -1,10 +1,10 @@
-import * as React from 'react'
+import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator()
 
 // screens
-import Home from '../screens/home'
+import Tab from './tab.routes'
 
 function Routes() {
   return (
@@ -13,7 +13,7 @@ function Routes() {
         headerShown: false
       }}
     >
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="TabBar" component={Tab} />
     </Stack.Navigator>
   )
 }
