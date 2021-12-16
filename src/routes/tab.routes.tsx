@@ -3,6 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 // Screens
 import Home from '../screens/Home'
+import Stocks from '../screens/Stocks'
+import Profile from '../screens/Profile'
+import Notifications from '../screens/Notifications'
 
 // Themes
 import themes from '../styles/index'
@@ -27,8 +30,21 @@ const TabNavigator = () => {
           let iconName: any
 
           switch (route.name) {
+            case 'payment':
+              iconName = 'wallet'
+              break
+            case 'Stocks':
+              iconName = 'leaderboard'
+              break
             case 'Home':
               iconName = 'home'
+              break
+            case 'Notifications':
+              iconName = 'notifications'
+              break
+            case 'Profile':
+              iconName = 'person'
+              break
           }
 
           return (
@@ -50,6 +66,9 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Stocks" component={Stocks} />
+      <Tab.Screen name="Notifications" component={Notifications} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   )
 }
