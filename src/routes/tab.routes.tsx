@@ -9,7 +9,7 @@ import Notifications from '../screens/Notifications'
 
 // Themes
 import themes from '../styles/index'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 import { useColorScheme } from 'react-native'
 
 const Tab = createBottomTabNavigator()
@@ -47,10 +47,24 @@ const TabNavigator = () => {
               break
           }
 
-          return (
+          return iconName !== 'leaderboard' ? (
             <Ionicons
               name={iconName}
               size={focused ? 22 : 18}
+              color={
+                useColorScheme() === 'dark'
+                  ? focused
+                    ? themes.dark.colors.secondary
+                    : themes.dark.colors.lightGray
+                  : focused
+                  ? themes.light.colors.secondary
+                  : themes.light.colors.lightGray
+              }
+            />
+          ) : (
+            <MaterialIcons
+              name={iconName}
+              size={focused ? 24 : 21}
               color={
                 useColorScheme() === 'dark'
                   ? focused
